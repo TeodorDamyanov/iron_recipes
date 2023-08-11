@@ -1,0 +1,18 @@
+{% extends 'base/base.html' %}
+{% block page_content %}
+<main>
+
+    <div class="edit-deletee edit-photo">
+        <h2>Add recipe</h2>
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <button class="add-btn" type="submit">Add Recipe!</button>
+        </form>
+
+    </div>
+
+</main>
+{% endblock %}

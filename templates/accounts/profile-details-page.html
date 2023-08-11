@@ -1,0 +1,82 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block page_content %}
+<main>
+
+    <div class="profilee">
+
+        <div class="profile-data">
+            <div class="profile_img">
+                <div class="image">
+
+                    {% if ironrecipeuser.profile_picture %}
+                        <img src="{{ ironrecipeuser.profile_picture }}" alt="img8">
+                    {% else %}
+                        <img src="{% static 'images/person.png' %}" alt="img8">
+                    {% endif %}
+                </div>
+            </div>
+            <div class="personal">
+                <div class="eedit">
+                    <p>{{ ironrecipeuser.username }}</p>
+
+                    {% if request.user.email == ironrecipeuser.email %}
+{#                    <a href="{% url 'profile edit' ironrecipeuser.pk %}">#}
+{#                        <img class="edit-img" src="{% static 'images/edit-pen-icon-6.jpg' %}" alt="edit button">#}
+{#                    </a>#}
+
+                    <a href="{% url 'profile delete' ironrecipeuser.pk %}">
+                        <img class="bin-img" src="{% static 'images/icon-remove-22.jpg' %}" alt="bin button">
+                    </a>
+                    {% endif %}
+
+                </div>
+                <div class="data">
+
+                    <span>{{ recipes.count }}</span>
+                    <p>total recipes</p>
+
+                    <span>{{ total_like_count }}</span>
+                    <p>likes</p>
+                </div>
+                <h3 class="names">{{ ironrecipeuser.full_name }}</h3>
+
+                <p class="email">{{ ironrecipeuser.email }}</p>
+
+            </div>
+        </div>
+
+
+        <div class="pet-photos">
+
+            {% for recipe in page_obj.object_list %}
+            <a href="{% url 'recipe details' recipe.slug %}">
+                <img src="{{ recipe.photo.url }}"
+                     alt="pet img">
+            </a>
+            {% endfor %}
+
+            <div class="pagination">
+                    <span class="step-links">
+                        {% if page_obj.has_previous %}
+                            <a href="?page=1">&laquo; first</a>
+                            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                        {% endif %}
+
+                        <span class="current">
+                            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                        </span>
+
+                        {% if page_obj.has_next %}
+                            <a href="?page={{ page_obj.next_page_number }}">next</a>
+                            <a href="?page={{ page_obj.paginator.num_pages }}">last
+&raquo;</a>
+                        {% endif %}
+                    </span>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+{% endblock %}

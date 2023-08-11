@@ -1,0 +1,50 @@
+<header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="{% url 'index' %}">
+                </a>
+
+                <a class="home" href="{% url 'index' %}">
+                    <i>Iron Recipes</i>
+                </a>
+            </div>
+
+            <div class="nav-links">
+                <ul class="nav-group">
+                    {% if request.user.is_authenticated %}
+                        <li class="nav-item">
+                            <a href="{% url 'recipe add' %}">
+                                <i>Add Recipe</i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{% url 'profile details' request.user.pk %}">
+                                <i>Profile</i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{% url 'logout user' %}">
+                                <i>Logout</i>
+                            </a>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a href="{% url 'login user' %}">
+                                <i>Login</i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{% url 'register user' %}">
+                                <i>Register</i>
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

@@ -1,18 +1,21 @@
-{#{% extends 'base/base.html' %}#}
-{#{% load forms %}#}
+{% extends 'base/base.html' %}
+{% load custom_filters %}
 
 {% block page_content %}
 
     <div class="login-register-div">
         <div class="login-register-box">
-            <h1>Iron Recipe</h1>
+            <h1>Iron Recipes</h1>
 
             <form action="{% url 'register user' %}" method="post">
                 {{ form.username.errors }}
-                {{ form.username}}  {# {{ form.username|form_field_class:'username-field' }} #}
-                {{ form.email }}
-                {{ form.password1 }}
-                {{ form.password2 }}
+                {{ form.username|placeholder:'Username' }}  {# {{ form.username|form_field_class:'username-field' }} #}
+                {{ form.email.errors }}
+                {{ form.email|placeholder:'Email' }}
+                {{ form.password1.errors }}
+                {{ form.password2.errors }}
+                {{ form.password1|placeholder:'Password' }}
+                {{ form.password2|placeholder:'Repeat password' }}
 
                 <input type="hidden" name="next" value="{{ next }}">
 
@@ -24,7 +27,7 @@
         </div>
         <div class="second-option">
 
-            <p>Have an account? <a href="#">Log in</a></p>
+            <p>Have an account? <a href="{% url 'login user' %}">Log in</a></p>
         </div>
     </div>
 

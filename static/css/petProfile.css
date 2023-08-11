@@ -1,0 +1,241 @@
+.pet-profile {
+    width: 95%;
+    margin-bottom: 20px;
+    margin-left: 38px;
+}
+
+.pet-profile .profile-data {
+    gap: 50px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: Elephant, cursive;
+}
+
+.pet-posts {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.pet-posts .card {
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    flex-basis: 100%;
+    background-color: #fdcdaf;
+    height: 450px;
+}
+
+.pet-posts .card .top {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pet-posts .card .bottom {
+    padding: 10px 20px;
+
+}
+
+.pet-posts .card .bottom .ads {
+    font-family: Raleway, cursive;
+    font-size: 20px;
+    text-align: right;
+    position: relative;
+    top: -330px;
+}
+
+.pet-posts .card .top .userDetails {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    font-weight: bold;
+}
+
+.pet-posts h3 {
+    font-size: 16px !important;
+    color: #4d4d4f !important;
+    font-weight: 500 !important;
+    line-height: 1em !important;
+    white-space: nowrap !important;
+}
+
+.postTimee {
+    margin-top: 8px;
+    font-weight: lighter;
+    cursor: default;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    text-transform: uppercase;
+    position: relative;
+    top: -310px;
+}
+
+.addCommentss {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    /*border-top: 1px solid #ddd;*/
+    padding: 10px 0;
+    position: relative;
+    top: -320px;
+}
+
+.addCommentss button {
+    position: absolute;
+    right: 30px;
+    color: rgba(0, 68, 255, 0.8);
+    font-weight: 600;
+    font-size: 17px;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+.addCommentss form label {
+    display: none;
+}
+
+.addCommentss form {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.coverr {
+    position: absolute;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.actionBtns {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+    top: 40px;
+}
+
+.actionBtnss svg {
+    cursor: pointer;
+}
+
+.actionBtnss .left svg {
+    margin-right: 8px;
+}
+
+.likess {
+    font-weight: 500;
+    margin-top: 5px;
+    font-size: 20px;
+    cursor: default;
+    color: #000000;
+    position: relative;
+    top: -12px;
+    left: 6px;
+}
+
+.edit-deletee {
+	display: block;
+	background-color: rgb(248, 202, 172);
+	/*border: 1px solid rgb(156, 152, 152);*/
+	padding: 45px;
+	margin-bottom: 15px;
+	border-radius: 30px;
+	margin-left: 400px;
+	/*border: 1px solid;*/
+	/*box-shadow: 1px 2px 3px #888888;*/
+}
+
+.edit-deletee {
+	padding-left: 100px;
+    margin-top: 150px;
+}
+
+.edit-deletee {
+	display: block;
+	background-color: rgb(248, 202, 172);
+	/*border: 1px solid rgb(156, 152, 152);*/
+	padding: 45px;
+	margin-bottom: 15px;
+	border-radius: 30px;
+	margin-left: 510px;
+	/*border: 1px solid;*/
+	/*box-shadow: 1px 2px 3px #888888;*/
+}
+
+.edit-deletee h2 {
+	text-align: center;
+	margin-top: -10px;
+	font-family: Elephant, cursive;
+}
+
+.edit-deletee label {
+	display: none;
+}
+
+.edit-deletee input, select {
+	background-color: rgb(240, 230, 230);
+	border: 0.1px solid rgb(186, 184, 184);
+	border-radius: 3px;
+	height: 30px;
+	padding-left: 2px;
+	margin-top: 10px;
+}
+
+.edit-deletee button {
+	color: white;
+	font-weight: bold;
+	font-size: 13px;
+	border: none;
+	width: 100%;
+	border-radius: 3px;
+	margin-top: 10px;
+	height: 30px;
+    box-shadow: 2px 3px #888888;
+    cursor: pointer;
+}
+
+.edit-deletee textarea {
+	position: relative !important;
+}
+
+.edit-deletee a {
+	color: white;
+}
+
+.edit-photo select {
+
+}
+
+.edit-photo label {
+	display: initial !important;
+	margin-top: 12px;
+	margin-right: 5px;
+	white-space: break-spaces;
+}
+
+.edit-photo textarea {
+	background-color: rgb(240, 230, 230);
+	border: 0.1px solid rgb(186, 184, 184);
+	border-radius: 3px;
+	height: 30px;
+	width: 77.7%;
+	margin-left: 1px;
+	padding-left: 2px;
+	margin-top: 20px;
+    top: -7px;
+}
+
+.edit-photo input {
+	padding: 3px;
+}
+
+.edit-photo p {
+	display: flex;
+}
