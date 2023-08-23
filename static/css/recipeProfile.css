@@ -25,7 +25,7 @@
     display: inline-block;
     flex-basis: 100%;
     background-color: #fdcdaf;
-    height: 450px;
+    height: 650px;
 }
 
 .pet-posts .card .top {
@@ -238,4 +238,11 @@
 
 .edit-photo p {
 	display: flex;
+}
+
+.comment {
+    position: relative;
+    top: -320px;
+    background-color: #e7b176;
+    padding-left: 4px;
 }
