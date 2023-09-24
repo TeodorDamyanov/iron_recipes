@@ -160,6 +160,8 @@
 
 .pet-photos {
     width: 850px;
+    background-color: #fdcdaf;
+    height: 490px;
 }
 
 .pet-photos img {

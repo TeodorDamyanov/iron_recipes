@@ -1,12 +1,15 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 
 from iron_recipes.common.forms import CommentForm
+from iron_recipes.common.models import Comment
 from iron_recipes.recipes.forms import RecipeAddForm, RecipeDeleteForm, RecipeEditForm
 from iron_recipes.recipes.models import Recipe
 
 
 # Create your views here.
 
+@login_required
 def recipe_add(request):
     form = RecipeAddForm(request.POST or None, request.FILES or None)
     if form.is_valid():
@@ -37,6 +40,7 @@ def recipe_details(request, recipe_name):
     return render(request, 'recipes/recipe-details-page.html', context)
 
 
+@login_required
 def recipe_edit(request, recipe_name):
     recipe = Recipe.objects.get(slug=recipe_name)
 
@@ -52,6 +56,7 @@ def recipe_edit(request, recipe_name):
     return render(request, 'recipes/recipe-edit-page.html', context)
 
 
+@login_required
 def recipe_delete(request, recipe_name):
     recipe = Recipe.objects.filter(slug=recipe_name).first()
     if request.method == 'POST':
@@ -60,3 +65,4 @@ def recipe_delete(request, recipe_name):
     form = RecipeDeleteForm(initial=recipe.__dict__)
     context = {"recipe": recipe, "form": form, "recipe_name": recipe_name}
     return render(request, 'recipes/recipe-delete-page.html', context)
+

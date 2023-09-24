@@ -15,7 +15,7 @@ class IronRecipeUserCreateForm(UserCreationForm):
 
 
 class IronRecipeUserEditForm(forms.ModelForm):
-    class Meta():
+    class Meta:
         model = IronRecipeUser
         fields = ('username', 'first_name', 'last_name', 'email', 'profile_picture')
         exclude = ('password',)

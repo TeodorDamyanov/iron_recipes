@@ -1,8 +1,8 @@
 @import './home.css';
 @import './login.css';
 @import './profileFunctions.css';
-@import './petFunctions.css';
-@import './photoDetails.css';
+@import './recipeFunctions.css';
 @import './profile.css';
-@import './petProfile.css';
+@import 'recipeProfile.css';
 @import "./profile_details.css";
+@import "./404.css";

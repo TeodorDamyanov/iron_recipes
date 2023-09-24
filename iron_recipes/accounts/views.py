@@ -1,4 +1,5 @@
 from django.core.paginator import Paginator
+from django.shortcuts import render
 from django.views import generic as views
 from django.urls import reverse_lazy
 from django.contrib.auth import views as auth_views
@@ -60,7 +61,7 @@ class UserDetailsView(views.DetailView):
 class UserDeleteView(views.DeleteView):  # doesnt work
     model = IronRecipeUser
     template_name = 'accounts/profile-delete-page.html'
-    next_page = reverse_lazy('index')
+    success_url = reverse_lazy('index')
 
     def post(self, *args, pk):
         self.request.user.delete()

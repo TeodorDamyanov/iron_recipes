@@ -1,0 +1,51 @@
+.not-found {
+    position: absolute;
+    /*top: 20%;*/
+    /*left: 5%;*/
+    z-index: 2;
+}
+
+.not-found-img img {
+    position: absolute;
+    left: -16px;
+    top: 108px;
+    width: 101vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.not-found button {
+    position: relative;
+    left: 660px;
+    top: 600px;
+    color: white;
+    background-color: rgb(159, 67, 107);
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    margin-top: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.not-found h3 {
+    position: relative;
+    left: 500px;
+    top: 700px;
+    font-size: 30px;
+    margin-bottom: 30px;
+    z-index: 1;
+    color: black;
+}
+
+.not-found h1 {
+    position: relative;
+    left: 408px;
+    top: 80px;
+    font-size: 40px;
+    margin-bottom: 30px;
+    z-index: 1;
+    color: black;
+    font-family: Elephant, cursive;
+}

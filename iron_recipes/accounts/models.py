@@ -2,6 +2,7 @@ from django.core import validators
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.contrib.auth import models as auth_models
+from django.utils.translation import gettext_lazy as _
 
 # Create your models here.
 
@@ -32,6 +33,11 @@ class IronRecipeUser(auth_models.AbstractUser):
     profile_picture = models.URLField(
         null=True,
         blank=True,
+    )
+
+    is_employee = models.BooleanField(
+        _("employee status"),
+        default=False,
     )
 
     @property
